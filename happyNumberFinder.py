@@ -1,19 +1,18 @@
 def happyFinder(number):
-    num = number
-    if (num == 1):
+    if (number == 1):
         return True
-    elif (num == 4):
+    elif (number == 4):
         return False
     else:
         digits = []
         sum = 0
-        for i in str(num):
+        for i in str(number):
             digits.append(int(i))
         for value in digits:
             sum += value*value
         print(sum)
-        num = sum
-        return happyFinder(num)
+        number = sum
+        return happyFinder(number)
 
 print("This program sums the squares of each digit of the enterred number repeatedly until it reaches 1 or 4.")
 print("All numbers will eventually reach 1 or 4. If the final number is 1, then the number is a happy number.")
